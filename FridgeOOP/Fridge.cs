@@ -4,6 +4,7 @@
     {
         //Fields
         private bool isClean;
+
         private string dispenserType;
         private int foodAmount;
         private bool bulbsWork;
@@ -56,17 +57,64 @@
 
         public void DispenseWater()
         {
-            if (dispenserType == "basic water dispenser")
+            if (dispenserType == "basic water dispenser.")
             {
-                System.Console.WriteLine("Here's some lukewarm water");
+                System.Console.WriteLine("Here's some lukewarm water.");
             }
-            else if (dispenserType == "deluxe dispenser")
+            else if (dispenserType == "deluxe dispenser.")
             {
-                System.Console.WriteLine("Enjoy your perfect ice water");
+                System.Console.WriteLine("Enjoy your perfect ice water.");
             }
             else
             {
-                System.Console.WriteLine("What's gonna come out? It's a surprise");
+                System.Console.WriteLine("What's gonna come out? It's a surprise.");
+            }
+        }
+
+        public string ChangeBulbs()
+        {
+            if (bulbsWork == false)
+            {
+                bulbsWork = true;
+                return "The bulbs have been changed.";
+            }
+            else
+            {
+                return "The bulbs don't have to be changed.";
+            }
+        }
+
+        public void RemoveFood(int foodRemoved)
+        {
+            foodAmount -= foodRemoved;
+        }
+
+        public string CheckSupplies()
+        {
+            if (foodAmount >= 80)
+            {
+                return "fully stocked";
+            }
+            else if (foodAmount > 40)
+            {
+                return "getting low";
+            }
+            else
+            {
+                return "time to go to the west side market";
+            }
+        }
+
+        public string Clean(bool isDirty)
+        {
+            if (isDirty)
+            {
+                isClean = true;
+                return "I cleaned the fridge";
+            }
+            else
+            {
+                return "The fridge is already clean";
             }
         }
     }
