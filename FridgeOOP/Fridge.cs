@@ -3,7 +3,7 @@
     public class Fridge
     {
         //Fields
-        private int isClean;
+        private bool isClean;
         private string dispenserType;
         private int foodAmount;
         private bool bulbsWork;
@@ -17,7 +17,7 @@
 
         public string DispenserType
         {
-            get { return this.DispenserType; }
+            get { return this.DispenserType; } //No set value do to hard coding the value
         }
 
         public string FoodAmount
@@ -32,17 +32,43 @@
             set { this.BulbsWork = value; }
         }
 
-        //Constructor
+        //Constructor allows us to create an instance of a class
         public Fridge()
         {
-            //Default
+            this.dispenserType = "Basic water dispenser";
         }
 
-        public Fridge(int isClean, string dispenserType, int foodAmount, bool bulbWorks)
+        public Fridge(string dispenserType)
         {
+            this.dispenserType = dispenserType;
+        }
+
+        public Fridge(bool isClean, string dispenserType, int foodAmount, bool bulbsWork)
+        {
+            this.isClean = isClean;
+            this.dispenserType = dispenserType;
+            this.foodAmount = foodAmount;
+            this.bulbsWork = bulbsWork;
         }
 
         //Methods()
+        //I need a way to dispense water
+
+        public void DispenseWater()
+        {
+            if (dispenserType == "basic water dispenser")
+            {
+                System.Console.WriteLine("Here's some lukewarm water");
+            }
+            else if (dispenserType == "deluxe dispenser")
+            {
+                System.Console.WriteLine("Enjoy your perfect ice water");
+            }
+            else
+            {
+                System.Console.WriteLine("What's gonna come out? It's a surprise");
+            }
+        }
     }
 }
 
