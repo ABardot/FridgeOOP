@@ -4,7 +4,6 @@
     {
         //Fields
         private bool isClean;
-
         private string dispenserType;
         private int foodAmount;
         private bool bulbsWork;
