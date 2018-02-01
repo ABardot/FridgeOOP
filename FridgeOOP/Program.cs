@@ -11,6 +11,7 @@ namespace FridgeOOP
             // Call methods on fridge object to do what the user wants
             int userChoice;
             Console.WriteLine("Hello, welcome to the fridge app.");
+            Fridge userFridge = new Fridge(false, "Deluxe dispenser", 70, true);
             do
             {
                 
@@ -26,7 +27,7 @@ namespace FridgeOOP
 
                 userChoice = int.Parse(Console.ReadLine());
 
-                Fridge userFridge = new Fridge(false, "Deluxe dispenser", 70, true);
+               
 
                 switch (userChoice)
                 {
