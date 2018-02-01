@@ -1,4 +1,6 @@
-﻿namespace FridgeOOP
+﻿using System;
+
+namespace FridgeOOP
 {
     public class Fridge
     {
@@ -11,25 +13,25 @@
         //Properties
         public bool IsClean
         {
-            get { return this.IsClean; }
-            set { this.IsClean = value; }
+            get { return this.isClean; }
+            set { this.isClean = value; }
         }
 
         public string DispenserType
         {
-            get { return this.DispenserType; } //No set value do to hard coding the value
+            get { return this.dispenserType; } //No set value do to hard coding the value
         }
 
-        public string FoodAmount
+        public int FoodAmount
         {
-            get { return this.FoodAmount; }
-            set { this.FoodAmount = value; }
+            get { return this.foodAmount; }
+            set { this.foodAmount = value; }
         }
 
-        public string BulbsWork
+        public bool BulbsWork
         {
-            get { return this.BulbsWork; }
-            set { this.BulbsWork = value; }
+            get { return this.bulbsWork; }
+            set { this.bulbsWork = value; }
         }
 
         //Constructor allows us to create an instance of a class
@@ -104,9 +106,9 @@
             }
         }
 
-        public string Clean(bool isDirty)
+        public string Clean()
         {
-            if (isDirty)
+            if (isClean == false)
             {
                 isClean = true;
                 return "I cleaned the fridge";
