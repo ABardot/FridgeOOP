@@ -54,7 +54,7 @@ namespace FridgeOOP
                         break;
 
                     case 6:
-                        Console.WriteLine("It is {0} that the fridge is clean. \nThe dispenser type is {1}. \nThe food amount is {2}. \nIt is {3} that the bulbs work", userFridge.IsClean, userFridge.DispenserType, userFridge.FoodAmount, userFridge.BulbsWork);
+                        Console.WriteLine("It is {0} that the fridge is clean. \nThe dispenser type is {1}. \nThe food amount is {2}. \nIt is {3} that the bulbs work.", userFridge.IsClean, userFridge.DispenserType, userFridge.FoodAmount, userFridge.BulbsWork);
                         Console.WriteLine();
                         break;
 
