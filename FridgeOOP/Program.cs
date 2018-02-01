@@ -21,7 +21,7 @@ namespace FridgeOOP
                 Console.WriteLine("To take food, type 4.");
                 Console.WriteLine("To check food supplies, type 5.");
                 Console.WriteLine("To see all fridge details, type 6.");
-                Console.WriteLine("To restart, type 7.");
+                //Console.WriteLine("To restart, type 7.");
                 Console.WriteLine("To quit, type 8.");
 
                 userChoice = int.Parse(Console.ReadLine());
